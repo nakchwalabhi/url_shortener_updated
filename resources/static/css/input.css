@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+
+.mirror-effect {
+    position: relative;
+}
+.mirror-effect::after {
+    content: '';
+    position: absolute;
+    bottom: -50%;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.1),
+        transparent
+    );
+    transform: scaleY(-1);
+    opacity: 0.3;
+    pointer-events: none;
+}

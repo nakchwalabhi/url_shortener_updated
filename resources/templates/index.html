@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+    <link href="/resources/static/css/output.css" rel="stylesheet">
+    
+   
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-gray-900 dark:to-black text-gray-800 dark:text-white min-h-screen flex items-center justify-center transition-colors duration-300">
+    <div class="container mx-auto px-4">
+        <div class="max-w-md mx-auto bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg rounded-2xl shadow-2xl p-6 mirror-effect transform transition-all duration-500 hover:scale-105">
+            <!-- Header -->
+            <div class="flex justify-between items-center mb-6">
+                <h1 class="text-3xl font-bold text-gray-800 dark:text-white">
+                    Link Forge
+                </h1>
+                <button id="themeToggle" class="p-2 bg-gray-200 dark:bg-gray-700 rounded-full hover:rotate-180 transition-transform duration-300">
+                    <svg id="themeIcon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-800 dark:text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path id="moonPath" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                        <path id="sunPath" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m3.343-5.657L5.636 5.636m11.314 11.314 1.414 1.414M6.343 6.343l-1.414-1.414m11.314 11.314L19.07 19.07" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- URL Input Section -->
+            <div class="space-y-4">
+                <input 
+                    type="text" 
+                    id="longUrlInput"
+                    placeholder="Paste your long URL here" 
+                    class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white/70 dark:bg-gray-700/70 text-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300"
+                >
+                <input 
+                    type="text" 
+                    id="customAliasInput"
+                    placeholder="Custom Alias (optional)" 
+                    class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white/70 dark:bg-gray-700/70 text-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300"
+                >
+                <button 
+                    id="shortenButton"
+                    class="w-full p-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 active:scale-95 transition-all duration-300 transform"
+                >
+                    Shorten URL
+                </button>
+            </div>
+
+            <!-- Result Section -->
+            <div id="resultSection" class="hidden mt-6 space-y-4">
+                <div class="flex items-center space-x-2">
+                    <input 
+                        type="text" 
+                        id="shortUrlOutput"
+                        readonly
+                        class="flex-grow p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-white"
+                    >
+                    <button 
+                        id="copyButton"
+                        class="p-3 bg-green-500 text-white rounded-lg hover:bg-green-600 active:scale-95 transition-all duration-300 transform"
+                    >
+                        Copy
+                    </button>
+                </div>
+                <div class="flex justify-center">
+                    <div 
+                        id="qrCodeContainer" 
+                        class="w-48 h-48 bg-gray-200 dark:bg-gray-700 rounded-lg flex items-center justify-center"
+                    >
+                        <img id="qrCodeImage" alt="QR Code" class="hidden max-w-full max-h-full">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="text-center text-gray-500 dark:text-gray-400 mt-6">
+            <p>&copy; 2024 Link Forge. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="/resources/static/js/app.js"></script>
+</body>
+</html>
