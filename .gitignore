@@ -1,0 +1,70 @@
+# Logs
+*.log
+spring.log
+
+# Compiled files
+target/
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Eclipse/STS
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# Visual Studio Code
+.vscode/
+
+# Maven
+.mvn/
+!.mvn/wrapper/maven-wrapper.jar
+
+# Temporary Files
+*.swp
+*.swo
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Backup files
+*.bak
+*.orig
+*.tmp
+
+# Logs and Reports
+test-output/
+surefire-reports/
+failsafe-reports/
+
+# Generated Files
+*.class
+*.jar
+*.war
+*.ear
+
+# Node Modules (if frontend is present)
+node_modules/
+
+# Other Tools
+HELP.md
