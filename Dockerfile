@@ -1,5 +1,8 @@
-# Use Maven image for building the application
-FROM maven:3.9.6-eclipse-temurin-23 AS build
+# Use OpenJDK 23 for building the application
+FROM openjdk:23 AS build
+
+# Install Maven
+RUN apt-get update && apt-get install -y maven && rm -rf /var/lib/apt/lists/*
 
 # Set working directory
 WORKDIR /app
