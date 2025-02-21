@@ -1,8 +1,5 @@
-# Use OpenJDK 23 for building the application
-FROM openjdk:23 AS build
-
-# Install Maven
-RUN apt-get update && apt-get install -y maven && rm -rf /var/lib/apt/lists/*
+# Use Maven with the latest OpenJDK 21 for building
+FROM maven:3.9.6-eclipse-temurin-21 AS build
 
 # Set working directory
 WORKDIR /app
